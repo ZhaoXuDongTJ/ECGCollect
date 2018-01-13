@@ -5,6 +5,9 @@
     <!-- // 蓝牙 权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".globalPool"
@@ -23,7 +26,9 @@
         </activity>
         <activity android:name=".UserManageActivity" />
         <activity android:name=".LiteSQL.list.signListActivity" />
-        <activity android:name=".LiteSQL.list.userListActivity"></activity>
+        <activity android:name=".LiteSQL.list.userListActivity" />
+        <activity android:name=".CollectResgisterActivity" />
+        <activity android:name=".CollectLoginActivity"></activity>
     </application>
 
 </manifest>

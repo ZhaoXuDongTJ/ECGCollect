@@ -9,7 +9,6 @@ import org.litepal.crud.DataSupport;
 public class userLite extends DataSupport {
 
     private String ObjectID;
-
     private String userName;
     private String userPicAddress;
     private String dataAddress;

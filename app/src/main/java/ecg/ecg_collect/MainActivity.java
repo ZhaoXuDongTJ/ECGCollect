@@ -1,5 +1,6 @@
 package ecg.ecg_collect;
 
+import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -21,6 +22,8 @@ import android.widget.Toast;
 import org.litepal.LitePal;
 
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import ecg.ecg_collect.blueTooth.BlueInfo;
 
@@ -50,10 +53,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             notice.setText("Bluetooth module not found");
             this.finish();
         }
+        initView();
         // 扫描 蓝牙
         blueProcess();
 
-        initView();
     }
 
     public void initView(){
@@ -177,13 +180,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.RegisterBtm:
-                if(isConnected&&isSocket){
-                    startActivity(new Intent(MainActivity.this,null));
-                }
+//                if(isConnected&&isSocket){
+                    final ProgressDialog dialog2 = ProgressDialog.show(this, "请准备", "您有3秒的准备时间");
+                    new Timer().schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            dialog2.cancel();
+                            startActivity(new Intent(MainActivity.this,CollectResgisterActivity.class));
+                        }
+                    },3000);
+//                }
                 break;
             case R.id.LoginBtm:
                 if(isConnected&&isSocket){
-                    startActivity(new Intent(MainActivity.this,null));
+                    final ProgressDialog dialog3 = ProgressDialog.show(this, "请准备", "您有3秒的准备时间");
+                    new Timer().schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            dialog3.cancel();
+                            startActivity(new Intent(MainActivity.this,CollectLoginActivity.class));
+                        }
+                    },3000);
                 }
                 break;
             default:
@@ -195,6 +212,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onDestroy() {
         super.onDestroy();
         unregisterReceiver(mReceiver);
-        Log.e("destory","解除注册");
+        Log.e("D e story","解除注册");
     }
 }
