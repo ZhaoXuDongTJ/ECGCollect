@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ecg.ecg_collect.UserManageActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="数据库管理"
+        android:gravity="center"
+        android:textColor="#8546ea"
+        android:textStyle="bold|italic"
+        android:background="#e9d5d5"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/start_user_list"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="用户列表"
+        android:gravity="center"
+        android:textColor="#414e54"
+        android:textStyle="bold|italic"
+        android:background="#c4baba"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/start_sign_list"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="签到列表"
+        android:gravity="center"
+        android:textColor="#414e54"
+        android:textStyle="bold|italic"
+        android:background="#afa5a5"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/ManageReturnBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:text="返回"/>
+
+</LinearLayout>

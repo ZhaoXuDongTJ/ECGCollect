@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="demo"></dbname>
+    <version value="1"></version>
+    <list>
+        <mapping class="ecg.ecg_collect.LiteSQL.userLite"></mapping>
+        <mapping class="ecg.ecg_collect.LiteSQL.signListLite"></mapping>
+    </list>
+</litepal>
