@@ -13,6 +13,7 @@ import java.util.Date;
 public class CommonUtils {
     // 三种地址的获取
     public static String getHeartPath(){
+        // 心电数据
         Date currentTime = new Date();
         @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("yyyy年/MM月/dd天/HH-mm-ss");
         String dateString = formatter.format(currentTime);
@@ -20,12 +21,14 @@ public class CommonUtils {
     }
 
     public static String getImagePath(){
+        // 头像数据
         Date currentTime = new Date();
         @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd/HH-mm-ss");
         String dateString = formatter.format(currentTime);
         return Environment.getExternalStorageDirectory()+"/zxd/UserPic/"+dateString+".jpg";
     }
     public static String getTempHeartPath(){
+        // 临时心电数据
         Date currentTime = new Date();
         @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("yyyy年/MM月/dd天/HH-mm-ss");
         String dateString = formatter.format(currentTime);

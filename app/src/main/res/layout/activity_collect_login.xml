@@ -27,6 +27,18 @@
         android:textColor="#4f4b54"
         android:textStyle="bold|italic"
         android:background="#63bedfc9"
+        android:visibility="gone"
+        android:textSize="28sp"/>
+    <TextView
+        android:id="@+id/collect_login_time"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="倒计时："
+        android:gravity="center"
+        android:textColor="#4f4b54"
+        android:textStyle="bold|italic"
+        android:background="#63bedfc9"
         android:textSize="28sp"/>
     <LinearLayout
         android:layout_width="match_parent"

@@ -39,7 +39,7 @@ public class CollectResgisterActivity extends AppCompatActivity implements View.
     private TextView collect_register_next;
     private ImageView collect_register_image;
     private EditText collect_register_name;
-// Blue
+// BlueToo
     private BlueInfo blueInfo = null;
     private globalPool globalPool = null;
     private BluetoothSocket btSocket =null;
